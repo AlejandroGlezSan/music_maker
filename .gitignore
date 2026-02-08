@@ -1,0 +1,12 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de audio generados (para no llenar el repo de gigas de música)
+*.wav
+
+# Carpetas de entornos virtuales (si usas venv)
+venv/
+.env
