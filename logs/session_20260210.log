@@ -1,0 +1,55 @@
+2026-02-10 18:15:16,904 [INFO] MusicEngine: Parámetros: {'duration': 30.0, 'style': 'techno', 'emotion': 'cyberpunk', 'bpm': 128, 'warmth': 0.18, 'stereo': 1.0, 'sidechain': True, 'preview': False, 'out': None}
+2026-02-10 18:15:16,905 [INFO] MusicEngine: Render iniciado: style=techno, emotion=cyberpunk, duration=30.0s
+2026-02-10 18:15:18,284 [ERROR] MusicEngine: Error durante render: type object 'Percussion' has no attribute 'generate_idm_sequence'
+2026-02-10 18:15:18,286 [DEBUG] MusicEngine: Stack trace:
+Traceback (most recent call last):
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\core\main.py", line 144, in render
+    audio = self.arranger.compose(style=style, duration_sec=duration_sec, emotion=emotion)
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\compositor\arranger.py", line 52, in compose
+    perc_loop = self._generate_drums(style, length, step_dur, tension)
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\compositor\arranger.py", line 202, in _generate_drums
+    pattern = Perc.generate_idm_sequence(steps=16, complexity=complexity)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Percussion' has no attribute 'generate_idm_sequence'
+
+2026-02-10 18:15:18,294 [ERROR] MusicEngine: Fallo en main render: type object 'Percussion' has no attribute 'generate_idm_sequence'
+Traceback (most recent call last):
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\core\main.py", line 219, in main
+    out, _ = renderer.render(duration_sec=args.duration, style=args.style,
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             emotion=args.emotion, warmth=args.warmth,
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             stereo_width=args.stereo, sidechain=args.sidechain,
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             filename=args.out)
+                             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\core\main.py", line 144, in render
+    audio = self.arranger.compose(style=style, duration_sec=duration_sec, emotion=emotion)
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\compositor\arranger.py", line 52, in compose
+    perc_loop = self._generate_drums(style, length, step_dur, tension)
+  File "C:\Users\victu\Documents\Juegos\Míos\music_maker\compositor\arranger.py", line 202, in _generate_drums
+    pattern = Perc.generate_idm_sequence(steps=16, complexity=complexity)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Percussion' has no attribute 'generate_idm_sequence'
+2026-02-10 18:17:49,898 [INFO] MusicEngine: Parámetros: {'duration': 30.0, 'style': 'techno', 'emotion': 'cyberpunk', 'bpm': 128, 'warmth': 0.18, 'stereo': 1.0, 'sidechain': True, 'preview': False, 'out': None}
+2026-02-10 18:17:49,898 [INFO] MusicEngine: Render iniciado: style=techno, emotion=cyberpunk, duration=30.0s
+2026-02-10 18:17:54,474 [INFO] MusicEngine: WAV guardado: renders\techno_cyberpunk_30.0s_20260210_181754.wav (duración 30.00 s)
+2026-02-10 18:17:54,475 [INFO] MusicEngine: Render completado en 4.58 s. Archivo: renders\techno_cyberpunk_30.0s_20260210_181754.wav
+2026-02-10 18:23:20,507 [INFO] MusicEngine: Parámetros: {'duration': 30.0, 'style': 'techno', 'emotion': 'cyberpunk', 'bpm': 128, 'warmth': 0.18, 'stereo': 1.0, 'sidechain': True, 'preview': True, 'out': None}
+2026-02-10 18:23:20,508 [INFO] MusicEngine: No se encontró módulo GUI; continuando en modo headless.
+2026-02-10 18:23:20,508 [INFO] MusicEngine: Render de prueba (preview) solicitado: 10s
+2026-02-10 18:23:20,508 [INFO] MusicEngine: Render iniciado: style=techno, emotion=cyberpunk, duration=10.0s
+2026-02-10 18:23:22,492 [INFO] MusicEngine: WAV guardado: renders\techno_cyberpunk_10s_20260210_182322.wav (duración 10.00 s)
+2026-02-10 18:23:22,492 [INFO] MusicEngine: Render completado en 1.98 s. Archivo: renders\techno_cyberpunk_10s_20260210_182322.wav
+2026-02-10 18:26:01,577 [INFO] MusicEngine: Render iniciado: style=techno, emotion=cyberpunk, duration=30.0s
+2026-02-10 18:26:06,139 [INFO] MusicEngine: WAV guardado: renders\techno_cyberpunk_30s_20260210_182606.wav (duración 30.00 s)
+2026-02-10 18:26:06,141 [INFO] MusicEngine: Render completado en 4.56 s. Archivo: renders\techno_cyberpunk_30s_20260210_182606.wav
+2026-02-10 18:26:44,971 [INFO] MusicEngine: Parámetros: {'duration': 30.0, 'style': 'techno', 'emotion': 'cyberpunk', 'bpm': 128, 'warmth': 0.18, 'stereo': 1.0, 'sidechain': True, 'preview': False, 'out': None}
+2026-02-10 18:26:44,983 [INFO] MusicEngine: Iniciando GUI desde ui.gui.run_gui
+2026-02-10 18:26:49,557 [INFO] MusicEngine: Render iniciado: style=techno, emotion=cyberpunk, duration=30.0s
+2026-02-10 18:26:53,950 [INFO] MusicEngine: WAV guardado: renders\techno_cyberpunk_30s_20260210_182653.wav (duración 30.00 s)
+2026-02-10 18:26:53,950 [INFO] MusicEngine: Render completado en 4.39 s. Archivo: renders\techno_cyberpunk_30s_20260210_182653.wav
+2026-02-10 18:27:37,207 [INFO] MusicEngine: Render iniciado: style=trance, emotion=cyberpunk, duration=30.0s
+2026-02-10 18:27:41,137 [INFO] MusicEngine: WAV guardado: renders\trance_cyberpunk_30s_20260210_182741.wav (duración 30.00 s)
+2026-02-10 18:27:41,138 [INFO] MusicEngine: Render completado en 3.93 s. Archivo: renders\trance_cyberpunk_30s_20260210_182741.wav
+2026-02-10 18:28:04,200 [INFO] MusicEngine: GUI iniciada; main cede control a la interfaz.
